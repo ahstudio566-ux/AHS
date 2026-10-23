@@ -1,0 +1,11 @@
+{
+  "name": "Remix DA NANG GREEN - HỆ THỐNG BÁO CÁO SỰ CỐ MÔI TRƯỜNG ",
+  "description": "Một ứng dụng web cho phép người dân Đà Nẵng và Quảng Nam báo cáo các vấn đề môi trường bằng cách tải lên hình ảnh. AI sẽ tự động phân tích, xác định loại sự cố, vị trí và mức độ ưu tiên để giúp cơ quan chức năng xử lý hiệu quả.",
+  "requestFramePermissions": [
+    "geolocation",
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

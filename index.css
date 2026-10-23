@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Custom Colors */
+  --color-brand-50: #f0fdfa;
+  --color-brand-100: #ccfbf1;
+  --color-brand-200: #99f6e4;
+  --color-brand-300: #5eead4;
+  --color-brand-400: #2dd4bf;
+  --color-brand-500: #14b8a6;
+  --color-brand-600: #0d9488;
+  --color-brand-700: #0f766e;
+  --color-brand-800: #115e59;
+  --color-brand-900: #134e4a;
+  --color-brand-950: #042f2e;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+@layer components {
+  .glass-header {
+    @apply sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-white/20 shadow-sm;
+  }
+
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-sm border border-white/40 shadow-sm rounded-3xl;
+  }
+
+  .bento-button {
+    @apply relative overflow-hidden transition-all duration-300 hover:-translate-y-1 active:scale-95;
+  }
+
+  .status-badge {
+    @apply px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider border;
+  }
+
+  .btn-primary {
+    @apply bg-brand-600 text-white font-bold py-3 px-6 rounded-2xl shadow-lg shadow-brand-200 hover:bg-brand-700 hover:shadow-brand-300 transition-all active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-slate-700 font-semibold py-3 px-6 rounded-2xl border border-slate-200 hover:bg-slate-50 transition-all active:scale-95;
+  }
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-200 rounded-full hover:bg-slate-300;
+}
+
+@keyframes strobeFlash {
+  0%, 100% { background-color: #020617; }
+  50% { background-color: #dc2626; }
+}
+
+.animate-strobe-flash {
+  animation: strobeFlash 0.3s infinite;
+}
